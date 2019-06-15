@@ -6,7 +6,7 @@
   + 例如，假设有实例 `JsonWriter[Option[Int]]`，则表达式 `Json.toJson(Some(1))` 是否会选择使用该实例？（`Some` 是 `Option` 的子类）
 * 当有多个相同类型的 type class instances 时，应如何选择？
   + 例如，若定义有多个 `JsonWriter[Person]`，则 `Json.toJson(aPerson)` 会选择哪个？
-  
+
 ## 1.6.1 Variance
 
 在定义 type class 的时候，可以为 type parameter 添加 variance annotation，以影响 type class 的变形，以及 implicit resolution。
@@ -25,7 +25,7 @@ variance 与子类型相关，若任何需要类型 `A` 的地方，都可以使
 trait F[+A]
 ```
 
-协变可以对很多数据类型建模，例如 `List` 和 `Option`。
+协变可以对很多 **数据** 类型建模，例如 `List` 和 `Option`。
 
 ```Scala
 trait List[+A]

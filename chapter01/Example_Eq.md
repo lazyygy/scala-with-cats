@@ -12,7 +12,7 @@ List(1, 2, 3).map(Option(_)).filter(item ⇒ item == 1)
 
 ## 1.5.1 Equality, Liberty, and Fraternity
 
-通过 `Eq`，可以为 *任意类型** 实现类型安全的相等比较：
+通过 `Eq`，可以为 **任意类型** 实现类型安全的相等比较：
 
 ```Scala
 trait Eq[@sp A] extends Any with Serializable { self =>
